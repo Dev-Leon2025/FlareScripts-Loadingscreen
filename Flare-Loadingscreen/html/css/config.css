@@ -1,0 +1,196 @@
+/* FC-Loadingscreen | config.css */
+/* High-Performance CSS mit optimierten Variablen für FiveM */
+
+:root {
+    /* Hauptfarben */
+    --primary-color: #4361ee;             /* Hauptfarbe */
+    --primary-rgb: 67, 97, 238;           /* RGB-Werte für Animationen */
+    --secondary-color: #3a0ca3;           /* Sekundärfarbe */
+    --secondary-rgb: 58, 12, 163;         /* RGB-Werte für Animationen */
+    --accent-color: #f72585;              /* Akzentfarbe */
+    --accent-rgb: 247, 37, 133;           /* RGB-Werte für Animationen */
+    
+    /* Textfarben */
+    --text-color: #ffffff;                /* Haupttextfarbe */
+    --text-secondary: rgba(255, 255, 255, 0.7); /* Sekundäre Textfarbe */
+    
+    /* Hintergrundfarben */
+    --bg-transparent: rgba(0, 0, 0, 0.7); /* Transparente Hintergrundfarbe */
+    --overlay-color: rgba(0, 0, 0, 0.5);  /* Overlay-Farbe */
+    
+    /* UI-Elemente */
+    --border-color: rgba(255, 255, 255, 0.08); /* Rahmenfarbe */
+    --shadow-color: rgba(0, 0, 0, 0.3);   /* Schattenfarbe */
+    --highlight-color: #f72585;           /* Highlight-Farbe für Hover-Effekte */
+    
+    /* Animationen */
+    --animation-speed: 3s;                /* Geschwindigkeit der Animationen */
+    --hover-transition: 0.3s;             /* Übergangszeit für Hover-Effekte */
+    
+    /* Glasmorphismus */
+    --blur-amount: 10px;                  /* Blur-Stärke für Glasmorphismus */
+    
+    /* Dimensionen */
+    --border-radius-sm: 5px;              /* Kleine Rahmenrundung */
+    --border-radius-md: 14px;             /* Mittlere Rahmenrundung */
+    --border-radius-lg: 50px;             /* Große Rahmenrundung */
+    --container-width: 85%;               /* Standardbreite der Container */
+}
+
+/* Farbschemata - einfach zu konfigurieren */
+
+/* Primärer Farbstil (Blau) */
+.primary-style {
+    --primary-color: #4361ee;
+    --primary-rgb: 67, 97, 238;
+    --secondary-color: #3a0ca3;
+    --secondary-rgb: 58, 12, 163;
+    --accent-color: #f72585;
+    --accent-rgb: 247, 37, 133;
+}
+
+/* Grüner Farbstil */
+.green-style {
+    --primary-color: #2ecc71;
+    --primary-rgb: 46, 204, 113;
+    --secondary-color: #27ae60;
+    --secondary-rgb: 39, 174, 96;
+    --accent-color: #f39c12;
+    --accent-rgb: 243, 156, 18;
+}
+
+/* Roter Farbstil */
+.red-style {
+    --primary-color: #e74c3c;
+    --primary-rgb: 231, 76, 60;
+    --secondary-color: #c0392b;
+    --secondary-rgb: 192, 57, 43;
+    --accent-color: #f1c40f;
+    --accent-rgb: 241, 196, 15;
+}
+
+/* Dunkler Farbstil */
+.dark-style {
+    --primary-color: #3498db;
+    --primary-rgb: 52, 152, 219;
+    --secondary-color: #2980b9;
+    --secondary-rgb: 41, 128, 185;
+    --accent-color: #e74c3c;
+    --accent-rgb: 231, 76, 60;
+    --overlay-color: rgba(0, 0, 0, 0.75);
+    --bg-transparent: rgba(0, 0, 0, 0.8);
+}
+
+/* Neon Farbstil */
+.neon-style {
+    --primary-color: #00ff9f;
+    --primary-rgb: 0, 255, 159;
+    --secondary-color: #00b8ff;
+    --secondary-rgb: 0, 184, 255;
+    --accent-color: #ff00ff;
+    --accent-rgb: 255, 0, 255;
+    --overlay-color: rgba(0, 0, 0, 0.8);
+    --border-color: rgba(0, 255, 200, 0.15);
+}
+
+/* Cyberpunk Farbstil */
+.cyberpunk-style {
+    --primary-color: #f9ff21;
+    --primary-rgb: 249, 255, 33;
+    --secondary-color: #00ffd9;
+    --secondary-rgb: 0, 255, 217;
+    --accent-color: #ff2975;
+    --accent-rgb: 255, 41, 117;
+    --overlay-color: rgba(13, 0, 26, 0.7);
+    --border-color: rgba(249, 255, 33, 0.15);
+}
+
+/* Optimierte anwendungsspezifische Styles */
+
+/* Overlay mit anpassbarer Transparenz */
+.overlay {
+    background: var(--overlay-color);
+    backdrop-filter: blur(var(--blur-amount));
+}
+
+/* Glasmorphismus-Elemente */
+.tab-selector,
+.music-controls,
+.progress-counter,
+.tips-container,
+.feature-item,
+.team-member,
+.social-icon {
+    backdrop-filter: blur(var(--blur-amount));
+    background-color: var(--bg-transparent);
+    border: 1px solid var(--border-color);
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+}
+
+/* Text-Styling */
+body {
+    color: var(--text-color);
+}
+
+.server-slogan {
+    color: var(--text-secondary);
+}
+
+/* Ladebalken und Fortschritt */
+.progress-bar {
+    background: linear-gradient(90deg, var(--primary-color), var(--secondary-color));
+}
+
+.progress-counter {
+    color: var(--primary-color);
+}
+
+/* Icons und Hervorhebungen */
+.feature-icon {
+    color: var(--primary-color);
+}
+
+.tip i {
+    color: var(--accent-color);
+}
+
+.team-role {
+    color: var(--primary-color);
+}
+
+/* Hover-Effekte */
+.tab-btn.active {
+    background-color: var(--primary-color);
+    box-shadow: 0 4px 15px rgba(var(--primary-rgb), 0.4);
+}
+
+.tab-btn:hover:not(.active),
+.social-icon:hover,
+.tip-navigation button:hover {
+    background-color: rgba(255, 255, 255, 0.15);
+}
+
+#toggle-music:hover {
+    background-color: var(--primary-color);
+    box-shadow: 0 0 15px rgba(var(--primary-rgb), 0.5);
+}
+
+.feature-item:hover,
+.team-member:hover {
+    border-color: var(--primary-color);
+    transform: translateY(-5px);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+}
+
+/* Slider-Styling */
+#volume-slider::-webkit-slider-thumb {
+    background: var(--primary-color);
+}
+
+/* Animation für Server-Titel */
+.server-title h1 {
+    background: linear-gradient(90deg, var(--primary-color), var(--secondary-color));
+    -webkit-background-clip: text;
+    background-clip: text;
+    text-shadow: 0 0 15px rgba(var(--primary-rgb), 0.4);
+}
