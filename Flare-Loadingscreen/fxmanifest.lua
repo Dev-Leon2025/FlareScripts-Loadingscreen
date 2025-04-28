@@ -3,7 +3,7 @@ game 'gta5'
 
 author 'Flare-Scripts'
 description 'Modern FiveM Loadingscreen'
-version '1.0.0'
+version '1.0.1'
 
 loadscreen 'html/index.html'
 loadscreen_cursor 'yes'
